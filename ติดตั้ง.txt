@@ -1,0 +1,8 @@
+coverlet.msbuild
+
+รัน
+dotnet test --no-restore --no-build --logger:"trx;LogFileName=Results.trx" --results-directory:"../web.UnitTest.Results" /p:CollectCoverage=true /p:CoverletOutput="../web.UnitTest.Results/Coverage.xml" /p:CoverletOutputFormat=opencover
+
+
+คำสั่ง generate report
+ReportGenerator.exe -reports:"D:\WorkingSpace\GT\1.Lab\5.NetCore\MyNUnitDemo\web.UnitTest.Results\Coverage.xml" -targetdir:"D:\WorkingSpace\GT\1.Lab\5.NetCore\MyNUnitDemo\web.UnitTest.Results\report" -sourcedirs:"D:\WorkingSpace\GT\1.Lab\5.NetCore\MyNUnitDemo\NUnitTest"
